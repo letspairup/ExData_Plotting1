@@ -10,7 +10,7 @@ epc.data <- read.csv2("household_power_consumption.txt", na.strings = "?") %>%
 
 png("plot1.png", width=500, height=500)
 
-hist(epc.data$Global_active_power, breaks = 12, 
-     col = "red", xlab = "Global Active Power (KW)", main="Global Active Power")
+with(epc.data, hist(Global_active_power, breaks = 12, 
+     col = "red", xlab = "Global Active Power (KW)", main="Global Active Power"))
 
 dev.off()
